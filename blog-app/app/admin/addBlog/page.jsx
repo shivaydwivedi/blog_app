@@ -5,8 +5,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-const page = () => {
-
+const Page = () => {  // <-- Uppercase here
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     title: "",
@@ -14,14 +13,14 @@ const page = () => {
     category: "Startup",
     author: "Shivay Dwivedi",
     authorImg: "/author_img.png"
-  })
+  });
 
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setData(data => ({ ...data, [name]: value }));
+    setData((data) => ({ ...data, [name]: value }));
     console.log(data);
-  }
+  };
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -32,6 +31,7 @@ const page = () => {
     formData.append('author', data.author);
     formData.append('authorImg', data.authorImg);
     formData.append('image', image);
+
     const response = await axios.post('/api/blog', formData);
     if (response.data.success) {
       toast.success(response.data.msg);
@@ -43,11 +43,10 @@ const page = () => {
         author: "Shivay Dwivedi",
         authorImg: "/author_img.png"
       });
-    }
-    else {
+    } else {
       toast.error("Error");
     }
-  }
+  };
 
   return (
     <>
@@ -71,7 +70,7 @@ const page = () => {
         <button type="submit" className='mt-8 w-40 h-12 bg-black text-white'>ADD</button>
       </form>
     </>
-  )
-}
+  );
+};
 
-export default page
+export default Page; // <-- Uppercase export
