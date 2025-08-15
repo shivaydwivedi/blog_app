@@ -2,8 +2,10 @@
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './Components/**/*.{js,ts,jsx,tsx,mdx}', // Capital C here
+    './Components/**/*.{js,ts,jsx,tsx,mdx}', // Match actual folder casing
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    '!./node_modules',
+    '!./.next',
   ],
   theme: {
     extend: {
