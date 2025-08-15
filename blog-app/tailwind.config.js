@@ -1,11 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './Components/**/*.{js,ts,jsx,tsx,mdx}', // Match actual folder casing
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    '!./node_modules',
-    '!./.next',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './Components/**/*.{js,ts,jsx,tsx,mdx}'
   ],
   theme: {
     extend: {
