@@ -51,8 +51,9 @@ const Header = () => {
         <h1 className='text-3xl sm:text-5xl font-medium'>Latest Blogs</h1>
         <p className='mt-10 max-w-[740px] m-auto text-xs sm:text-base'>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry's standard dummy text ever.
+          Lorem Ipsum has been the industry&apos;s standard dummy text ever.
         </p>
+
 
         <form
           onSubmit={onSubmitHandler}
